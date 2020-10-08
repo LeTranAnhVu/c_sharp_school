@@ -9,138 +9,157 @@ namespace Ex3_solutions
     {
         static void Main(string[] args)
         {
-            /*Task 1: 
-             Create a program where you declare variables for storing person name and birth year. Give
-             values to those variables that correspond to your own data. Declare also a variable that
-             represents a reference year and assign it to the value of the current year. With these variables
-             calculate your current age, store it in a new variable and output the data in the format:
-             */
-            //Copy paste your program here:
-
-            String name;
-            int yrOfBirth;
-
-            name = "vu le";
-            yrOfBirth = 1995;
-
-            int currentYear = 2018;
-            int age = currentYear - yrOfBirth;
-
-            Console.WriteLine($"{name}, {age} years");
+            /*Task 1: Remove the comment marks and fix this code. Explain changes as comments*/
+            float i = 10.8f; // if float variable must have f behind number 
+            int k = 100 + (int)i; // float is stronger than int, we should convert float to int
+            string myStr = Convert.ToString(i + k); // Convert.ToString
+            int j = (int)i + k; // same explain above
+            Console.WriteLine("i + k = " + myStr + ", j = " + j);
 
             /*Task 2:
-                Create a program which calculates, stores in appropriately declared variables and finally prints
-                on the screen the answers to the following questions:
+             Primarily applying the direct casting, if it does not work then explicit type casting, 
+             then with some other method convert the given number to different types, 
+             if any of them is possible.
             */
-            const int FINGER_OF_PLAYER = 10;
-            const int FEET_OF_PLAYER = 1;
-            const int NUM_OF_PLAYER_IN_TEAM = 11;
 
-            int numOfPlayers;
+            //For each case:
+            //If type can be converted, remove the comments from the variable declaration 
+            //and IF NECESSARY, ADD the conversion with suitable method
+            //Next remove the comments from the output case that describes your selection
 
-            //a) How many feet and fingers a group of people of given size have in together
-            numOfPlayers = 100;
-            int totalFingers = numOfPlayers * FINGER_OF_PLAYER;
-            int totalFeet = numOfPlayers * FEET_OF_PLAYER;
-            Console.WriteLine($"{numOfPlayers} persons have {totalFeet} feet and {totalFingers} fingers");
+            //    byte myByte = 293.34;
+            Console.Write("Number constant 293.34 converts in type byte as ");
+            //Console.WriteLine(myByte + " without explicit casting");
+            //Console.WriteLine(myByte + " with explicit casting and without loss of data");
+            //Console.WriteLine(myByte + " with explicit casting but with loss of data");
+            //Console.WriteLine(myByte + " not with explicit casting, but with Convert -object");
+            Console.WriteLine("with no methods");
 
-            numOfPlayers = 123456789;
-            totalFingers = numOfPlayers * FINGER_OF_PLAYER;
-            totalFeet = numOfPlayers * FEET_OF_PLAYER;
-            Console.WriteLine($"{numOfPlayers} persons have {totalFeet} feet and {totalFingers} fingers");
+            int myInt = (int)293.34;
+            Console.Write("Number constant 293.34 converts in type int as ");
+            //Console.WriteLine(myInt + " without explicit casting");
+            //Console.WriteLine(myInt + " with explicit casting and without loss of data");
+            Console.WriteLine(myInt + " with explicit casting but with loss of data");
+            //Console.WriteLine(myInt + " not with explicit casting, but with Convert -object");
+            //Console.WriteLine("with no methods");
 
-            //b) How many football teams can a group of a given size form (11 players per team)
-            numOfPlayers = 100;
-            int numOfTeams = numOfPlayers / NUM_OF_PLAYER_IN_TEAM;
-            int numLeftOutPlayers = numOfPlayers - numOfTeams * NUM_OF_PLAYER_IN_TEAM;
-            Console.WriteLine($"{numOfPlayers} persons form {numOfTeams} teams and {numLeftOutPlayers} persons are left out");
+            float myFloat = (float)293.34;
+            Console.Write("Number constant 293.34 converts in type float as ");
+            //Console.WriteLine(myFloat + " without explicit casting");
+            Console.WriteLine(myFloat + " with explicit casting and without loss of data");
+            //Console.WriteLine(myFloat + " with explicit casting but with loss of data");
+            //Console.WriteLine(myFloat + " not with explicit casting, but with Convert -object");
+            //Console.WriteLine("with no methods");
 
-            numOfPlayers = 123456789;
-            numOfTeams = numOfPlayers / NUM_OF_PLAYER_IN_TEAM;
-            numLeftOutPlayers = numOfPlayers - numOfTeams * NUM_OF_PLAYER_IN_TEAM;
-            Console.WriteLine($"{numOfPlayers} persons form {numOfTeams} teams and {numLeftOutPlayers} persons are left out");
+            double myDouble = 293.34;
+            Console.Write("Number constant 293.34 converts in type double as ");
+            Console.WriteLine(myDouble + " without explicit casting");
+            //Console.WriteLine(myDouble + " with explicit casting and without loss of data");
+            //Console.WriteLine(myDouble +  "with explicit casting but with loss of data");
+            //Console.WriteLine(myDouble + " not with explicit casting, but with Convert -object");
+            //Console.WriteLine("with no methods");
 
-            //c) How many balls is required if each team needs three balls
-            numOfPlayers = 100;
-            numOfTeams = numOfPlayers / NUM_OF_PLAYER_IN_TEAM;
-            int numOfBalls = numOfTeams * 3;
-            Console.WriteLine($"{numOfTeams} football teams require {numOfBalls} balls");
+            decimal myDecimal = (decimal)293.34;
+            Console.Write("Number constant 293.34 converts in type decimal as ");
+            //Console.WriteLine(myDecimal + " without explicit casting");
+            Console.WriteLine(myDecimal + " with explicit casting and without loss of data");
+            //Console.WriteLine(myDecimal +  "with explicit casting but with loss of data");
+            //Console.WriteLine(myDecimal + " not with explicit casting, but with Convert -object");
+            //Console.WriteLine("with no methods");
 
-            numOfPlayers = 123456789;
-            numOfTeams = numOfPlayers / NUM_OF_PLAYER_IN_TEAM;
-            numOfBalls = numOfTeams * 3;
-            Console.WriteLine($"{numOfTeams} football teams require {numOfBalls} balls");
+            //bool myBoolean = 293.34;
+            Console.Write("Number constant 293.34 converts in type boolean as ");
+            //Console.WriteLine(myBoolean + " without explicit casting");
+            //Console.WriteLine(myBoolean + " with explicit casting and without loss of data");
+            //Console.WriteLine(myBoolean + " with explicit casting but with loss of data");
+            //Console.WriteLine(myBoolean + " not with explicit casting, but with Convert -object");
+            Console.WriteLine("with no methods");
 
-            //d) How many players are left outside a team after filling all the teams with 11 players
+            string myString = Convert.ToString(293.34);
+            Console.Write("Number constant 293.34 converts in type string as ");
+            //Console.WriteLine(myString + " without explicit casting");
+            //Console.WriteLine(myString + " with explicit casting and without loss of data");
+            //Console.WriteLine(myString + " with explicit casting but with loss of data");
+            Console.WriteLine(myString + " not with explicit casting, but with Convert -object");
+            //Console.WriteLine("with no methods");         
 
-            // ALREADY ANSWER IN b.
 
-            /*Task3:
-            3	Create a program which defines a named constant to denote the value of Pi (= 3.14159) and 
-            appropriate variables to describe the radius r, area A and circumference c of a sphere. 
-            */
-            const double PI = 3.14;
-            double r, area, cir;
 
-            r = 1.0;
-            cir = 2 * PI * r;
-            area = PI * r * r;
-            Console.WriteLine($"Radius: {r}, Area: {area}, Circumference: {cir}");
+            /*Task 3:
+         *    Convert, if possible, with some method, the text constant "293,34" such that the value can be assigned to a
+         *    variable of different types 
+         *    Add conversion and remove comments if the conversion is possible 
+         *   Remove also comments from those output commands that are feasible
+             */
+            string origNr = "293,34";
+            //byte byteNr = origNr;
+            //int intNr = origNr;
+            float floatNr = Convert.ToSingle(origNr);
+            double doubleNr = Convert.ToDouble(origNr);
+            decimal decimalNr = Convert.ToDecimal(origNr);
+            //boolean booleanNr = origNr;
+            string stringNr = origNr;
+            //Console.WriteLine("Byte type is ok: " + byteNr);
+            Console.WriteLine("Byte type is NOT ok");
+            //Console.WriteLine("Int type is ok: " + intNr);
+            Console.WriteLine("Int type is NOT ok");
+            Console.WriteLine("Float type is ok: " + floatNr);
+            //Console.WriteLine("Float type is NOT ok");
+            Console.WriteLine("Double type is ok: " + doubleNr);
+            //Console.WriteLine("Double type is NOT ok");
+            Console.WriteLine("Decimal type is ok: " + decimalNr);
+            //Console.WriteLine("Decimal type is NOT ok");
+            //Console.WriteLine("Boolean type is ok: " + booleanNr);
+            Console.WriteLine("Boolean type is NOT ok");
+            Console.WriteLine("String type is ok: " + stringNr);
+            //Console.WriteLine("String type is NOT ok");
 
-            r = 5.0;
-            cir = 2 * PI * r;
-            area = PI * r * r;
-            Console.WriteLine($"Radius: {r}, Area: {area}, Circumference: {cir}");
 
-            r = 10.0;
-            cir = 2 * PI * r;
-            area = PI * r * r;
-            Console.WriteLine($"Radius: {r}, Area: {area}, Circumference: {cir}");
+
 
             /*Task 4:
-             "how many bits are there in one kilo/mega/giga/terabyte?"
+             Create a program which is able to convert temperature given in Celsius –degrees to Fahrenheit
+             degrees. Test your algorithm with all values Celsius = 0.0, Celsius = 100.0 and Celsius = 37,3 and output the result 
+             in format
+                         xx degrees in Celsius correspond to yy degrees in Fahrenheit
             */
-            const int BIT_PER_BYTE = 8;
-            const int BYTE_PER_KILOBYTE = 1024;
-            const int KILOBYTE_PER_MEGABYTE = 1024;
-            const int MEGABYTE_PER_GIGABYTE = 1024;
-            const int GIGABYTE_PER_TERABYTE = 1024;
+            double f;
+            double c = 0.0;
 
-            long bitPerTerra = (long)GIGABYTE_PER_TERABYTE * MEGABYTE_PER_GIGABYTE * KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE;
-            long bitPerGiga = (long)MEGABYTE_PER_GIGABYTE * KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE;
-            int bitPerMega = KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE;
-            int bitPerKilo = BYTE_PER_KILOBYTE * BIT_PER_BYTE;
+            f = c * 9 / 5 + 32;
+            Console.WriteLine($"{c} degrees in Celsius correspond to {f} degrees in Fahrenheit");
 
-            Console.WriteLine($"1 Terrabyte has {bitPerTerra} bits");
-            Console.WriteLine($"1 Gigabyte has {bitPerGiga} bits");
-            Console.WriteLine($"1 Megabyte has {bitPerMega} bits");
-            Console.WriteLine($"1 Kilobyte has {bitPerKilo} bits");
-            Console.WriteLine($"1 byte has {BIT_PER_BYTE} bits");
-            /*
-            Task 5:
-            "for a given amount of bits (as constant) how many
-             tera-, giga-, mega- and kilobytes they correspond 
-             to and how many bits are left over"
-            */
+            c = 100.0;
+            f = c * 9 / 5 + 32;
+            Console.WriteLine($"{c} degrees in Celsius correspond to {f} degrees in Fahrenheit");
 
-            long bits = 123456789123456789;
-            int teras = (int)(bits / ((long)GIGABYTE_PER_TERABYTE * MEGABYTE_PER_GIGABYTE * KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE));
+            c = 37.3;
+            f = c * 9 / 5 + 32;
+            Console.WriteLine($"{c} degrees in Celsius correspond to {f} degrees in Fahrenheit");
 
-            long bitLeftOver = (int)(bits % ((long)GIGABYTE_PER_TERABYTE * MEGABYTE_PER_GIGABYTE * KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE));
-            int gigas = (int)(bitLeftOver / ((long)MEGABYTE_PER_GIGABYTE * KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE));
+            /*Task 5
+              Create a program which is able to calculate the value of the given expression
+              with values (x,y,z,w) = (1,1,1,0) and (x,y,z,w) = (11,11,11,11) and output the results in format
 
-            bitLeftOver = (int)(bitLeftOver % ((long)MEGABYTE_PER_GIGABYTE * KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE));
-            int megas = (int)(bitLeftOver / (KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE));
+                  f(x,y,z,w) = xxx
 
-            bitLeftOver = (int)(bitLeftOver % ((long)KILOBYTE_PER_MEGABYTE * BYTE_PER_KILOBYTE * BIT_PER_BYTE));
-            int kilos = (int)(bitLeftOver / (BYTE_PER_KILOBYTE * BIT_PER_BYTE));
+             */
+            int x, y, z, w;
+            double res;
 
-            bitLeftOver = (int)(bitLeftOver % (BYTE_PER_KILOBYTE * BIT_PER_BYTE));
-            int bytes = (int)(bitLeftOver / (BIT_PER_BYTE));
+            x = 1;
+            y = 1;
+            z = 1;
+            w = 0;
+            res = (double)(10 + x) / (9 * x + 2) - (double)4 * (x / y) + (double)(z * 3 + w) / ((z / x) + y);
+            Console.WriteLine($"f({x},{y},{z},{w}) = {res}");
 
-            bitLeftOver = (int)(bitLeftOver % BIT_PER_BYTE);
-
-            Console.WriteLine($"{bits} bits correspond to\n{teras} terabytes\n{gigas} gigabytes\n{megas} megabytes\n {kilos} kilobytes\n{bytes} bytes\nand {bitLeftOver} bits");
+            x = 11;
+            y = 11;
+            z = 11;
+            w = 11;
+            res = (double)(10 + x) / (9 * x + 2) - (double)4 * (x / y) + (double)(z * 3 + w) / ((z / x) + y);
+            Console.WriteLine($"f({x},{y},{z},{w}) = {res}");
         }
     }
 }
